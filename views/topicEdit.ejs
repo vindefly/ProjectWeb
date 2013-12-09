@@ -1,0 +1,40 @@
+<%- include inc/header.ejs %>
+<form class="form-horizontal" role="form" style="width: 50%; margin: 0 auto;" method="post">
+    <div class="from-group">
+        <label for="inputEmail3" class="col-sm-3 control-label"> </label>
+        <h1>添加专题</h1>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-3 control-label">专题名称：</label>
+        <div class="col-sm-7">
+            <input type="text" name="names" class="form-control" value="<%if(post.names){%><%= post.names%><%}%>">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-3 control-label">专题缩略图：</label>
+        <div class="col-sm-7">
+            <input type="file" name="pic" class="form-control" value=""><%= post.pic%>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-3 control-label">上传专题包：</label>
+        <div class="col-sm-7">
+            <input type="file" name="url" class="form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-3 control-label">所属类型：</label>
+        <div class="col-sm-7">
+            <select name="types">
+                <option value="老师" <%if (post.types == "老师") {%>selected<%}%>>老师</option>
+                <option value="学生" <%if (post.types == "学生") {%>selected<%}%>>学生</option>
+                <option value="家长" <%if (post.types == "家长") {%>selected<%}%>>家长</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-10">
+            <input type="submit" name="submit" class="btn btn-primary btn-lg" style="padding: 10px 60px;" value="提交" />
+        </div>
+    </div>
+</form>

@@ -1,0 +1,28 @@
+<%- include inc/header.ejs %>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>用户名</th>
+        <th>密码</th>
+        <th>邮箱</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% posts.forEach(function (post, index) {%>
+    <tr>
+        <td><%= index %></td>
+        <td><%= post.name %></td>
+        <td><%= post.password %></td>
+        <td><%= post.email %></td>
+        <th>
+            <a href="/useredit/<%= post._id%>">编辑</a>
+            <a href="/remove/<%= post._id%>">删除</a>
+        </th>
+    </tr>
+    <% }) %>
+
+    </tbody>
+</table>
+

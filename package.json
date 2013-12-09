@@ -1,0 +1,17 @@
+{
+    "name": "project-web",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "express": "*",
+        "express-partials": "*",
+        "ejs": "*",
+        "mongodb": "*",
+        "connect-mongo": "*",
+        "connect-flash": "*",
+        "markdown": "*"
+    }
+}

@@ -1,0 +1,32 @@
+<%- include inc/header.ejs %>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>名称</th>
+        <th>作者</th>
+        <th>图片</th>
+        <th>浏览地址</th>
+        <th>类型</th>
+        <th>时间</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% posts.forEach(function (post, index) {%>
+    <tr>
+        <td><%= index %></td>
+        <td><%= post.names %></td>
+        <td><%= post.users %></td>
+        <td><%= post.pic %></td>
+        <td><%= post.url %></td>
+        <td><%= post.types %></td>
+        <td><%= post.day.minute %></td>
+        <th>
+            <a href="/topicEdit/<%= post._id%>">编辑</a>
+            <a href="/topicRemove/<%= post._id%>">删除</a>
+        </th>
+    </tr>
+    <% }) %>
+    </tbody>
+</table>

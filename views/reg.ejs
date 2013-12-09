@@ -1,0 +1,38 @@
+<%- include inc/header.ejs %>
+
+<form class="form-horizontal" role="form" style="width: 50%; margin: 0 auto;" method="post">
+    <div class="from-group">
+        <label for="inputEmail3" class="col-sm-3 control-label"> </label>
+        <h1>注册</h1>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-3 control-label">用户名：</label>
+        <div class="col-sm-7">
+            <input type="text" name="name" class="form-control" placeholder="Username">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-3 control-label">密码：</label>
+        <div class="col-sm-7">
+            <input type="password" name="password" class="form-control" placeholder="Password">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3"  class="col-sm-3 control-label">确认密码：</label>
+        <div class="col-sm-7">
+            <input type="password" name="password-repeat" class="form-control" placeholder="Password">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword3" class="col-sm-3 control-label">邮箱：</label>
+        <div class="col-sm-7">
+            <input type="Email" name="email" class="form-control" placeholder="Email">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-10">
+            <input type="submit" name="submit" class="btn btn-primary btn-lg" style="padding: 10px 60px;" value="提交" />
+            <a href="/" class="btn btn-link">已经有账号，立即登录>></a>
+        </div>
+    </div>
+</form>

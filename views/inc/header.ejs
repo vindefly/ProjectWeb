@@ -1,0 +1,23 @@
+<%if(user){%>
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/ ">SW</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li <%if(title == "用户"){%> class="active" <%}%>><a href="/index">用户</a></li>
+        <li <%if(title == "专题列表"){%> class="active" <%}%>><a href="/topicList">专题</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="/topicAdd">添加专题</a></li>
+        <li><a href="/reg">添加账号</a></li>
+        <li><a href="javascript:void(0);"><%= user.name%></a></li>
+        <li><a href="/logout">退出</a></li>
+    </ul>
+</nav>
+<%}%>
