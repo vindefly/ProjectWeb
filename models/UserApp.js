@@ -7,7 +7,7 @@ function User(user) {
     this.email = user.email;
 }
 
-module.exports = User
+module.exports = User;
 
 User.prototype.insert = function(callback){
     var data = {
