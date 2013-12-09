@@ -1,18 +1,15 @@
-
 /**
  * Module dependencies.
  */
-
-var express   = require('express');
-var routes    = require('./routes');
-var http      = require('http');
-var path      = require('path');
-var MongoStore = require('connect-mongo')(express);
-var settings = require('./config');
-var flash = require('connect-flash');
-var partials  = require('express-partials');
-
-var app       = express();
+var express     = require('express');
+var routes      = require('./routes');
+var http        = require('http');
+var path        = require('path');
+var MongoStore  = require('connect-mongo')(express);
+var settings    = require('./config');
+var flash       = require('connect-flash');
+var partials    = require('express-partials');
+var app         = express();
 
 app.configure(function(){
     app.set('port', process.env.PORT || 80);
