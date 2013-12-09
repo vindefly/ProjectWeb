@@ -22,7 +22,7 @@ app.configure(function(){
     app.use(partials());
     app.use(express.favicon());
     app.use(express.logger('dev'));
-    //app.use(express.bodyParser({ keepExtensions: true, uploadDir: './upload/zt' }));
+    app.use(express.bodyParser({ keepExtensions: true, uploadDir: './upload/zt' }));
     app.use(express.methodOverride());
     app.use(express.cookieParser());
     app.use(express.session({
@@ -35,7 +35,7 @@ app.configure(function(){
     }));
     app.use(app.router);
     app.use('/static', express.static(path.join(__dirname, '/public')));
-    //app.use(express.static(path.join(__dirname, 'upload')));
+    app.use(express.static(path.join(__dirname, 'upload')));
 });
 
 app.configure('development', function(){
@@ -47,4 +47,3 @@ http.createServer(app).listen(app.get('port'), function(){
 });
 
 routes(app);
-routes1(app);
